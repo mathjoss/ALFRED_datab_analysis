@@ -3,7 +3,7 @@
 
 *--- REQUIREMENTS ---*
 R (only version 1.1.456 tested) with stringr, ape, ggplot2, rlang, stringi, dplyr, tidyr
-Arlequin with a console version (no console version also works if you aim to analyze only a few alleles)
+Arlequin with a console version (no console version also works if you aim to analyze only a few SNP/microhap)
 
 
 *--- INSTALLATION ---*
