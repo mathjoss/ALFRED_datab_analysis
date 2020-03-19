@@ -7,7 +7,7 @@ Arlequin with a console version (no console version also works if you aim to ana
 
 
 *--- INSTALLATION ---*
-1. Install Rstudio and Arlequin
+1. Install Rstudio and Arlequin (if you are under linux, the executable file is already present in the github repository). 
 2. Download github repository  'mathjoss/Alfred2FST '
 3. Install the necessary packages
 
@@ -15,7 +15,7 @@ Arlequin with a console version (no console version also works if you aim to ana
 *--- INPUT FILE ---*
 A text file from ALFRED database (https://alfred.med.yale.edu/alfred/index.asp)
 We used : 
- - Microhap_alleleF_198.txt from Download
+ - Microhap_alleleF_198.txt from https://alfred.med.yale.edu/alfred/alfredDataDownload.asp
  - Allele frequencies from FROG-kb: http://frog.med.yale.edu/FrogKB/docFreqDownload.jsp
 
 
