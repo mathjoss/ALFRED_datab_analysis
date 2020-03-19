@@ -5,7 +5,11 @@ setwd("~/Documents/FST")
 
 library(stringr)
 
+# whatever name you want
 database.name <- "ALFRED"
+
+# name of the empty folder where you want your output files to be stored
+name_folder <- "all_files_arp2"
 
 #--------------------------------------------
 # SPLIT BIG FILE INTO MULTIPLE FILES...
@@ -33,7 +37,8 @@ for (i in 1:(length(indexes)-1)){
     
     filen <- gsub(" ", "", name.file, fixed = TRUE)
     filen <- gsub("|", "", filen, fixed = TRUE)
-    outputfile.name <- paste("all_files_arp2/", filen, ".arp", sep="")
+    
+    outputfile.name <- paste(name_folder, "/", filen, ".arp", sep="")
     
     #--------------------------------------------
     # WRITE PROFILE 
@@ -82,15 +87,13 @@ for (i in 1:(length(indexes)-1)){
       
       line='\tSampleData= {'
       write(line,file=outputfile.name,append=TRUE) 
-      print(pop)
+      
       for (col in 1:ncol(freq.tabl)){
-        print(paste('\t\t', as.character(col), '\t', as.character(freq.tabl[pop, col], sep="")))
         line=paste('\t\t', as.character(col), '\t', as.character(freq.tabl[pop, col], sep=""))
         write(line,file=outputfile.name,append=TRUE) 
       }
       line='\t}\n' 
       write(line,file=outputfile.name,append=TRUE) 
-      print("ca marche")
     }
   }
 }
