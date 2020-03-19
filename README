@@ -40,7 +40,9 @@ We used :
 
 6. The output is a set of folders. Use the file mean_all_files.R to get a set of files with the data that is interesting to you (only a clear txt file and not a whole set a folders, files..) In our case we selected only FST but it can be change manually in the code.
 
-7. Run the file mean_all_files_part2.R to mean all those files together, and get a single table. 
+7. Run the file mean_all_files_part2.R to mean all those files together, and get a single table. (go through this whole file to change path and file names!)
+
+8. Additional step: compute MultiDimensional Scaling with this distance matrix with extract_MDS.R. Choose the number of dimensions, plot Goodness of fit and R squared..
 
 
 
