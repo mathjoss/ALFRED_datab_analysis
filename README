@@ -1,0 +1,50 @@
+
+
+
+*--- REQUIREMENTS ---*
+R (only version 1.1.456 tested) with stringr, ape, ggplot2, rlang, stringi, dplyr, tidyr
+Arlequin with a console version (no console version also works if you aim to analyze only a few alleles)
+
+
+*--- INSTALLATION ---*
+1. Install Rstudio and Arlequin
+2. Download github repository  'mathjoss/Alfred2FST '
+3. Install the necessary packages
+
+
+*--- INPUT FILE ---*
+A text file from ALFRED database (https://alfred.med.yale.edu/alfred/index.asp)
+We used : 
+ - Microhap_alleleF_198.txt from Download
+ - Allele frequencies from FROG-kb: http://frog.med.yale.edu/FrogKB/docFreqDownload.jsp
+
+
+*--- OUTPUTFILE ---*
+ - A csv file with FST for all population (distance matrix)
+
+
+*--- INSTRUCTIONS FOR OPERATION ---*
+1. Download your input file from Alfred of FROG-kb.
+
+2. Create an empty folder where you want to store the Arlequin file for each allele frequency. 
+
+3. Open alfredtxt2arlequin.R file. Enter the path where you stored the input file, path of the empty folder, and change name for input and output file.
+--> this step will create one text file for each allele. If you want to gather all allele in a single file, use alfredtxt2arlequin_gather1file.R. However, with this file, it's too heavy for Arlequin...
+
+4. Place the following files in the same folder that contains all the .arl file just created: 
+- arlecore.exe file (in our case, arlecore3522_64bit)
+- arl_run.ars (where you might change things according to what you exactly want: in our case, we selected many information such as FST, population comparaison, etc...)
+- LaunchArlecore.sh, where you need to change the name of two files if needed.
+
+5. Run LaunchArlecore.sh (then takes around 15 min per files)
+
+6. The output is a set of folders. Use the file mean_all_files.R to get a set of files with the data that is interesting to you (only a clear txt file and not a whole set a folders, files..) In our case we selected only FST but it can be change manually in the code.
+
+7. Run the file mean_all_files_part2.R to mean all those files together, and get a single table. 
+
+
+
+
+*--- CONTACT mathilde.josserand@gmail.com with any questions ---*
+
+
